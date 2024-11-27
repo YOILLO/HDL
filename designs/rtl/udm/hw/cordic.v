@@ -44,33 +44,24 @@ module cos_CORDIC(
   wire [1:0] quadrant;
   assign quadrant = angle[31:30];
 
-  always @(*)
-  begin
-    case(quadrant)
-      2'b00,
-      2'b11:
-      begin
-        x[0] = 32000/1.647;
-        y[0] = 0;
-        z[0] = angle;
-      end
+  wire [16:0] x_0;
+  wire [16:0] y_0;
+  wire [31:0] z_0;
 
-      2'b01:
-      begin
-        x[0] = -0;
-        y[0] = 32000/1.647;
-        z[0] = {2'b00,angle[29:0]};
-      end
+  assign x[0] = 
+    quadrant == 2'b00 || quadrant == 2'b11 ? 32000/1.647 :
+    quadrant == 2'b01 ? -0 :
+    0;
+    
+  assign y[0] = 
+    quadrant == 2'b00 || quadrant == 2'b11 ? 0 :
+    quadrant == 2'b01 ? 32000/1.647 :
+    -32000/1.647;
 
-      2'b10:
-      begin
-        x[0] = 0;
-        y[0] = -32000/1.647;
-        z[0] = {2'b11,angle[29:0]};
-      end
-    endcase
-  end
-
+  assign z[0] = 
+    quadrant == 2'b00 || quadrant == 2'b11 ? angle :
+    quadrant == 2'b01 ? {2'b00,angle[29:0]} :
+    {2'b11,angle[29:0]};
 
   genvar i;
 
@@ -84,17 +75,13 @@ module cos_CORDIC(
 
     assign z_sign = z[i][31];
 
-    always @(*)
-    begin
-      x[i+1] = z_sign ? x[i] + y_shr : x[i] - y_shr;
-      y[i+1] = z_sign ? y[i] - x_shr : y[i] + x_shr;
-      z[i+1] = z_sign ? z[i] + atan_table[i] : z[i] - atan_table[i];
-    end
+    assign x[i+1] = z_sign ? x[i] + y_shr : x[i] - y_shr;
+    assign y[i+1] = z_sign ? y[i] - x_shr : y[i] + x_shr;
+    assign z[i+1] = z_sign ? z[i] + atan_table[i] : z[i] - atan_table[i];
   end
 
   assign cosine = x[15];
 
 endmodule
-
 
 

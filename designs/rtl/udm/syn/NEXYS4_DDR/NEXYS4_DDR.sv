@@ -176,4 +176,9 @@ always @(posedge clk_gen)
 assign udm_bus.resp = udm_csr_resp | udm_testmem_resp;
 assign udm_bus.rdata = (udm_csr_rdata & {32{udm_csr_resp}}) | (udm_testmem_rdata & {32{udm_testmem_resp}});
 
+cos_CORDIC cos(
+ .clock(clk_gen),
+ .cosine(SW),
+ .angle(LED));
+
 endmodule
