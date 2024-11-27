@@ -131,6 +131,14 @@ assign udm_bus.ack = udm_bus.req;   // bus always ready to accept request
 logic udm_csr_resp, udm_testmem_resp;
 logic [31:0] udm_csr_rdata;
 
+logic [15:0] cos;
+logic [31:0] ang;
+
+cos_CORDIC cos_cor(
+ .clock(clk_gen),
+ .cosine(cos),
+ .angle(ang));
+
 // bus request
 always @(posedge clk_gen)
     begin
@@ -140,6 +148,7 @@ always @(posedge clk_gen)
     if (srst)
         begin
         LED <= 16'hffff;
+        ang <= 0;
         end
     
     else
@@ -151,6 +160,7 @@ always @(posedge clk_gen)
             if (udm_bus.we)     // writing
                 begin
                 if (udm_bus.addr == CSR_LED_ADDR) LED <= udm_bus.wdata;
+                if (udm_bus.addr == 32'h00000008) ang <= udm_bus.wdata;
                 end
             
             else                // reading
@@ -165,6 +175,11 @@ always @(posedge clk_gen)
                     udm_csr_resp <= 1'b1;
                     udm_csr_rdata <= SW;
                     end
+                if (udm_bus.addr == 32'h00000008)
+                    begin
+                    udm_csr_resp <= 1'b1;
+                    udm_csr_rdata <= cos;
+                    end
                 udm_testmem_resp <= udm_testmem_enb;
                 end
             end
@@ -175,10 +190,5 @@ always @(posedge clk_gen)
 // bus response
 assign udm_bus.resp = udm_csr_resp | udm_testmem_resp;
 assign udm_bus.rdata = (udm_csr_rdata & {32{udm_csr_resp}}) | (udm_testmem_rdata & {32{udm_testmem_resp}});
-
-cos_CORDIC cos(
- .clock(clk_gen),
- .cosine(SW),
- .angle(LED));
 
 endmodule

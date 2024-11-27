@@ -44,10 +44,6 @@ module cos_CORDIC(
   wire [1:0] quadrant;
   assign quadrant = angle[31:30];
 
-  wire [16:0] x_0;
-  wire [16:0] y_0;
-  wire [31:0] z_0;
-
   assign x[0] = 
     quadrant == 2'b00 || quadrant == 2'b11 ? 32000/1.647 :
     quadrant == 2'b01 ? -0 :

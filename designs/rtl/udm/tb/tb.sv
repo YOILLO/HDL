@@ -118,11 +118,17 @@ initial
 	
 	// writing to LED
 	udm.wr32(32'h00000000, 32'h5a5a5a5a);
+	WAIT(100);
 	
 	// reading SW
 	udm.rd32(32'h00000004);
+	WAIT(100);
 	
-	WAIT(1000);
+	// writing to cos
+	udm.wr32(32'h00000008, 32'h5a5a5a5a);
+	WAIT(100);
+	
+	WAIT(10000);
 
 	$display ("### TEST PROCEDURE FINISHED ###");
 	$stop;
