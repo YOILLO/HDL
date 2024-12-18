@@ -131,7 +131,7 @@ assign udm_bus.ack = udm_bus.req;   // bus always ready to accept request
 logic udm_csr_resp, udm_testmem_resp;
 logic [31:0] udm_csr_rdata;
 
-logic [15:0] cos;
+logic [31:0] cos;
 logic [31:0] ang;
 
 cos_CORDIC cos_cor(

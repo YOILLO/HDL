@@ -125,7 +125,16 @@ initial
 	WAIT(100);
 	
 	// writing to cos
-	udm.wr32(32'h00000008, 32'h5a5a5a5a);
+	//udm.wr32(32'h00000008, 32'h5a5a5a5a);
+	//WAIT(100);
+	
+	//udm.wr32(32'h00000008, 32'h0);
+	//WAIT(100);
+	
+	//udm.wr32(32'h00000008, 32'h1);
+	//WAIT(100);
+	
+	udm.wr32(32'h00000008, 32'h17ED0);
 	WAIT(100);
 	
 	WAIT(10000);
