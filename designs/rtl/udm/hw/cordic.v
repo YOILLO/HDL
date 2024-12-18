@@ -1,12 +1,15 @@
 
 module cos_CORDIC(
   input clock,
-  output [31:0] cosine,
-  input [31:0] angle);
+  output reg [31:0] cosine,
+  input [31:0] angle,
+  input start,
+  output reg ready,
+  input rst);
 
-  wire signed [31:0] x [0:15];
-  wire signed [31:0] y [0:15];
-  wire [32:0] z [0:15];
+  reg signed [31:0] x [0:15];
+  reg signed [31:0] y [0:15];
+  reg [32:0] z [0:15];
   wire signed [15:0] atan_table [0:15];
  
   assign atan_table[00] = 'hc910;
@@ -26,30 +29,42 @@ module cos_CORDIC(
   assign atan_table[14] = 'h0004;
   assign atan_table[15] = 'h0002;
 
-  assign x[0] = 65536;
-    
-  assign y[0] = 0;
+  reg [8:0] i;
 
-  assign z[0] = angle;
+  wire z_sign;
+  wire signed [31:0] x_shr, y_shr;
 
-  genvar i;
+  assign x_shr = x[i] >>> i;
+  assign y_shr = y[i] >>> i;
+  assign z_sign = (z[i][32] || z[i] == 0);
 
-  for (i=0; i < 15; i=i+1)
-  begin: xyz
-    wire z_sign;
-    wire signed [31:0] x_shr, y_shr;
-
-    assign x_shr = x[i] >>> i;
-    assign y_shr = y[i] >>> i;
-
-    assign z_sign = (z[i][32] || z[i] == 0);
-
-    assign x[i+1] = z_sign ? x[i] + y_shr : x[i] - y_shr;
-    assign y[i+1] = z_sign ? y[i] - x_shr : y[i] + x_shr;
-    assign z[i+1] = z_sign ? z[i] + atan_table[i] : z[i] - atan_table[i];
+  always @(posedge clock)
+  begin
+    if (rst)
+    begin
+        i <= 15;
+    end
+    if (start)
+    begin
+        x[0] <= 65536;
+        y[0] <= 0;
+        z[0] <= angle;
+        i <= 0;
+        ready <= 0;
+    end
+    else if (i < 15)
+    begin
+        x[i+1] <= z_sign ? x[i] + y_shr : x[i] - y_shr;
+        y[i+1] <= z_sign ? y[i] - x_shr : y[i] + x_shr;
+        z[i+1] <= z_sign ? z[i] + atan_table[i] : z[i] - atan_table[i];
+        i <= i + 1;
+    end
+    else
+    begin
+        cosine <= x[15];
+        ready <= 1;
+    end
   end
-
-  assign cosine = x[15];
 
 endmodule
 

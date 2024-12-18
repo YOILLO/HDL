@@ -133,17 +133,24 @@ logic [31:0] udm_csr_rdata;
 
 logic [31:0] cos;
 logic [31:0] ang;
+logic start, ready;
 
 cos_CORDIC cos_cor(
  .clock(clk_gen),
  .cosine(cos),
- .angle(ang));
+ .angle(ang),
+ .start(start),
+ .ready(ready),
+ .rst(srst));
 
 // bus request
 always @(posedge clk_gen)
     begin
     udm_csr_resp <= 1'b0;
     udm_testmem_resp <= 1'b0;
+    
+    if (!ready)
+        start <= 0;
     
     if (srst)
         begin
@@ -160,7 +167,11 @@ always @(posedge clk_gen)
             if (udm_bus.we)     // writing
                 begin
                 if (udm_bus.addr == CSR_LED_ADDR) LED <= udm_bus.wdata;
-                if (udm_bus.addr == 32'h00000008) ang <= udm_bus.wdata;
+                if (udm_bus.addr == 32'h00000008)
+                begin
+                    ang <= udm_bus.wdata;
+                    start <= 1;
+                end
                 end
             
             else                // reading
@@ -178,7 +189,10 @@ always @(posedge clk_gen)
                 if (udm_bus.addr == 32'h00000008)
                     begin
                     udm_csr_resp <= 1'b1;
-                    udm_csr_rdata <= cos;
+                    if (ready)
+                        udm_csr_rdata <= cos;
+                    else
+                        udm_csr_rdata <= 0;
                     end
                 udm_testmem_resp <= udm_testmem_enb;
                 end
