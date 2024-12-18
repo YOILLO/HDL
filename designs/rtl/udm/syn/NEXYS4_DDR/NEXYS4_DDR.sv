@@ -149,9 +149,14 @@ always @(posedge clk_gen)
     udm_csr_resp <= 1'b0;
     udm_testmem_resp <= 1'b0;
     
-    if (!ready)
+    if (start)
         start <= 0;
-    
+
+    if (ready)
+    begin
+        udm_csr_resp <= 1'b1;
+        udm_csr_rdata <= cos;
+    end
     if (srst)
         begin
         LED <= 16'hffff;

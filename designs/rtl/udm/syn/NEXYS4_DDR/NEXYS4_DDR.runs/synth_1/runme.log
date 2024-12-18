@@ -9,17 +9,18 @@
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 source NEXYS4_DDR.tcl -notrace
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 354.719 ; gain = 76.609
 Command: synth_design -top NEXYS4_DDR -part xc7a100tcsg324-3
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-3
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 4440 
+INFO: Helper process launched with PID 26360 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 754.020 ; gain = 177.828
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 821.500 ; gain = 177.633
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'NEXYS4_DDR' [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'NEXYS4_DDR' [E:/HDL/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.sv:24]
 	Parameter SIM bound to: NO - type: string 
 	Parameter UDM_BUS_TIMEOUT bound to: 104857600 - type: integer 
 	Parameter UDM_RTX_EXTERNAL_OVERRIDE bound to: NO - type: string 
@@ -28,17 +29,17 @@ INFO: [Synth 8-6157] synthesizing module 'NEXYS4_DDR' [C:/Users/user/Downloads/H
 	Parameter TESTMEM_ADDR bound to: -2147483648 - type: integer 
 	Parameter TESTMEM_WSIZE_POW bound to: 10 - type: integer 
 	Parameter TESTMEM_WSIZE bound to: 1024 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'sys_clk' [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.runs/synth_1/.Xil/Vivado-15272-lab39/realtime/sys_clk_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'sys_clk' (1#1) [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.runs/synth_1/.Xil/Vivado-15272-lab39/realtime/sys_clk_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'reset_sync' [C:/Users/user/Downloads/HDL-master/designs/rtl/reset_sync/reset_sync.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sys_clk' [E:/HDL/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.runs/synth_1/.Xil/Vivado-6764-DESKTOP-IQ6KBKE/realtime/sys_clk_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'sys_clk' (1#1) [E:/HDL/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.runs/synth_1/.Xil/Vivado-6764-DESKTOP-IQ6KBKE/realtime/sys_clk_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'reset_sync' [E:/HDL/designs/rtl/reset_sync/reset_sync.v:1]
 	Parameter SYNC_STAGES bound to: 4 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'reset_sync' (2#1) [C:/Users/user/Downloads/HDL-master/designs/rtl/reset_sync/reset_sync.v:1]
-INFO: [Synth 8-6157] synthesizing module 'MemSplit32' [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.sv:9]
-INFO: [Synth 8-6155] done synthesizing module 'MemSplit32' (2#1) [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.sv:9]
-INFO: [Synth 8-6157] synthesizing module 'udm' [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/udm.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'reset_sync' (2#1) [E:/HDL/designs/rtl/reset_sync/reset_sync.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MemSplit32' [E:/HDL/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.sv:9]
+INFO: [Synth 8-6155] done synthesizing module 'MemSplit32' (2#1) [E:/HDL/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'udm' [E:/HDL/designs/rtl/udm/hw/udm.v:10]
 	Parameter BUS_TIMEOUT bound to: 104857600 - type: integer 
 	Parameter RTX_EXTERNAL_OVERRIDE bound to: NO - type: string 
-INFO: [Synth 8-6157] synthesizing module 'uart_rx' [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/uart_rx.v:10]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [E:/HDL/designs/rtl/udm/hw/uart_rx.v:10]
 	Parameter RTX_EXTERNAL_OVERRIDE bound to: NO - type: string 
 	Parameter ST_NOSYNC bound to: 4'b0000 
 	Parameter ST_NOSYNC_WAIT1_1 bound to: 4'b0001 
@@ -54,17 +55,17 @@ INFO: [Synth 8-6157] synthesizing module 'uart_rx' [C:/Users/user/Downloads/HDL-
 	Parameter ST_SYNC_WAIT_START bound to: 4'b1011 
 	Parameter ST_SYNC_RX_DATA bound to: 4'b1100 
 	Parameter ST_SYNC_WAIT_STOP bound to: 4'b1101 
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/uart_rx.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (3#1) [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/uart_rx.v:10]
-INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/uart_tx.v:10]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/HDL/designs/rtl/udm/hw/uart_rx.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (3#1) [E:/HDL/designs/rtl/udm/hw/uart_rx.v:10]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [E:/HDL/designs/rtl/udm/hw/uart_tx.v:10]
 	Parameter RTX_EXTERNAL_OVERRIDE bound to: NO - type: string 
 	Parameter ST_IDLE bound to: 8'b00000000 
 	Parameter ST_START bound to: 8'b00000001 
 	Parameter ST_TX_DATA bound to: 8'b00000010 
 	Parameter ST_STOP bound to: 8'b00000011 
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/uart_tx.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (4#1) [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/uart_tx.v:10]
-INFO: [Synth 8-6157] synthesizing module 'udm_controller' [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/udm_controller.v:10]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/HDL/designs/rtl/udm/hw/uart_tx.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (4#1) [E:/HDL/designs/rtl/udm/hw/uart_tx.v:10]
+INFO: [Synth 8-6157] synthesizing module 'udm_controller' [E:/HDL/designs/rtl/udm/hw/udm_controller.v:10]
 	Parameter BUS_TIMEOUT bound to: 104857600 - type: integer 
 	Parameter SYNC_BYTE bound to: 8'b01010101 
 	Parameter ESCAPE_BYTE bound to: 8'b01011010 
@@ -88,22 +89,23 @@ INFO: [Synth 8-6157] synthesizing module 'udm_controller' [C:/Users/user/Downloa
 	Parameter TX_RDATA bound to: 8'b00000110 
 	Parameter WAIT_TX bound to: 8'b00000111 
 	Parameter WAIT_RESP bound to: 8'b00001000 
-INFO: [Synth 8-6155] done synthesizing module 'udm_controller' (5#1) [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/udm_controller.v:10]
-INFO: [Synth 8-6155] done synthesizing module 'udm' (6#1) [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/udm.v:10]
-INFO: [Synth 8-6157] synthesizing module 'ram_dual' [C:/Users/user/Downloads/HDL-master/designs/rtl/ram/ram_dual.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'udm_controller' (5#1) [E:/HDL/designs/rtl/udm/hw/udm_controller.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'udm' (6#1) [E:/HDL/designs/rtl/udm/hw/udm.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ram_dual' [E:/HDL/designs/rtl/ram/ram_dual.v:1]
 	Parameter init_type bound to: none - type: string 
 	Parameter init_data bound to: nodata.hex - type: string 
 	Parameter dat_width bound to: 32 - type: integer 
 	Parameter adr_width bound to: 10 - type: integer 
 	Parameter mem_size bound to: 1024 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'ram_dual' (7#1) [C:/Users/user/Downloads/HDL-master/designs/rtl/ram/ram_dual.v:1]
-WARNING: [Synth 8-689] width (30) of port connection 'adr0_i' does not match port width (10) of module 'ram_dual' [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.sv:120]
-INFO: [Synth 8-6157] synthesizing module 'cos_CORDIC' [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'cos_CORDIC' (8#1) [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'NEXYS4_DDR' (9#1) [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.sv:24]
-WARNING: [Synth 8-3331] design cos_CORDIC has unconnected port clock
+INFO: [Synth 8-6155] done synthesizing module 'ram_dual' (7#1) [E:/HDL/designs/rtl/ram/ram_dual.v:1]
+WARNING: [Synth 8-689] width (30) of port connection 'adr0_i' does not match port width (10) of module 'ram_dual' [E:/HDL/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.sv:120]
+INFO: [Synth 8-6157] synthesizing module 'cos_CORDIC' [E:/HDL/designs/rtl/udm/hw/cordic.v:2]
+WARNING: [Synth 8-6014] Unused sequential element xyz[14].y_reg[15] was removed.  [E:/HDL/designs/rtl/udm/hw/cordic.v:63]
+WARNING: [Synth 8-6014] Unused sequential element xyz[14].z_reg[15] was removed.  [E:/HDL/designs/rtl/udm/hw/cordic.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'cos_CORDIC' (8#1) [E:/HDL/designs/rtl/udm/hw/cordic.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'NEXYS4_DDR' (9#1) [E:/HDL/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.sv:24]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 819.559 ; gain = 243.367
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 886.082 ; gain = 242.215
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -116,76 +118,77 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 819.559 ; gain = 243.367
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 886.082 ; gain = 242.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 819.559 ; gain = 243.367
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 886.082 ; gain = 242.215
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.runs/synth_1/.Xil/Vivado-15272-lab39/sys_clk/sys_clk/sys_clk_in_context.xdc] for cell 'sys_clk'
-Finished Parsing XDC File [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.runs/synth_1/.Xil/Vivado-15272-lab39/sys_clk/sys_clk/sys_clk_in_context.xdc] for cell 'sys_clk'
-Parsing XDC File [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.xdc]
-Finished Parsing XDC File [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/NEXYS4_DDR_propImpl.xdc].
+Parsing XDC File [E:/HDL/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.runs/synth_1/.Xil/Vivado-6764-DESKTOP-IQ6KBKE/sys_clk/sys_clk/sys_clk_in_context.xdc] for cell 'sys_clk'
+Finished Parsing XDC File [E:/HDL/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.runs/synth_1/.Xil/Vivado-6764-DESKTOP-IQ6KBKE/sys_clk/sys_clk/sys_clk_in_context.xdc] for cell 'sys_clk'
+Parsing XDC File [E:/HDL/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.xdc]
+Finished Parsing XDC File [E:/HDL/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/HDL/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/NEXYS4_DDR_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/NEXYS4_DDR_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 962.824 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1033.254 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 962.824 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 1033.254 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 962.824 ; gain = 386.633
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 1033.254 ; gain = 389.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 962.824 ; gain = 386.633
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 1033.254 ; gain = 389.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  C:/Users/user/Downloads/HDL-master/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.runs/synth_1/.Xil/Vivado-15272-lab39/sys_clk/sys_clk/sys_clk_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  C:/Users/user/Downloads/HDL-master/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.runs/synth_1/.Xil/Vivado-15272-lab39/sys_clk/sys_clk/sys_clk_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  E:/HDL/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.runs/synth_1/.Xil/Vivado-6764-DESKTOP-IQ6KBKE/sys_clk/sys_clk/sys_clk_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  E:/HDL/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.runs/synth_1/.Xil/Vivado-6764-DESKTOP-IQ6KBKE/sys_clk/sys_clk/sys_clk_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for sys_clk. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 962.824 ; gain = 386.633
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 1033.254 ; gain = 389.387
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_rx'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'udm_controller'
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:47]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:47]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:48]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:48]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:47]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:47]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:48]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:48]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:47]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:47]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:48]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:48]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:47]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:47]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:48]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:48]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:47]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:47]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:48]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:48]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:47]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:47]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:48]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:48]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:47]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/user/Downloads/HDL-master/designs/rtl/udm/hw/cordic.v:47]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:76]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:75]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:75]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:76]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:76]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:75]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:75]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:76]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:76]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:75]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:75]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:76]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:76]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:75]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:75]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:76]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:76]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:75]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:75]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:76]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:76]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:75]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:75]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:76]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:76]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:75]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/HDL/designs/rtl/udm/hw/cordic.v:75]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -229,7 +232,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'udm_controller'
 INFO: [Synth 8-3971] The signal "ram_dual:/ram_reg" was recognized as a true dual port RAM template.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 962.824 ; gain = 386.633
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 1033.254 ; gain = 389.387
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -242,30 +245,29 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 22    
-	   3 Input     32 Bit       Adders := 23    
-	   5 Input     32 Bit       Adders := 1     
+	   2 Input     33 Bit       Adders := 14    
+	   2 Input     32 Bit       Adders := 6     
+	   3 Input     32 Bit       Adders := 29    
 	   2 Input      3 Bit       Adders := 2     
 	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 11    
+	               33 Bit    Registers := 14    
+	               32 Bit    Registers := 44    
 	               29 Bit    Registers := 1     
 	               16 Bit    Registers := 1     
 	                8 Bit    Registers := 6     
 	                4 Bit    Registers := 1     
 	                3 Bit    Registers := 2     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 23    
+	                1 Bit    Registers := 41    
 +---RAMs : 
 	              32K Bit         RAMs := 1     
 +---Muxes : 
-	   2 Input     34 Bit        Muxes := 3     
-	   2 Input     32 Bit        Muxes := 29    
+	   2 Input     32 Bit        Muxes := 39    
 	  14 Input     32 Bit        Muxes := 1     
-	   4 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 2     
 	   8 Input     32 Bit        Muxes := 5     
-	   3 Input     32 Bit        Muxes := 1     
-	   2 Input     17 Bit        Muxes := 2     
+	   2 Input     17 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 1     
 	   2 Input     15 Bit        Muxes := 1     
 	   2 Input     14 Bit        Muxes := 1     
@@ -281,6 +283,7 @@ Detailed RTL Component Info :
 	   6 Input      8 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
 	  14 Input      4 Bit        Muxes := 1     
 	  14 Input      3 Bit        Muxes := 1     
 	   4 Input      3 Bit        Muxes := 1     
@@ -289,10 +292,10 @@ Detailed RTL Component Info :
 	   4 Input      2 Bit        Muxes := 1     
 	   8 Input      2 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 36    
+	   2 Input      1 Bit        Muxes := 41    
 	  14 Input      1 Bit        Muxes := 7     
-	   4 Input      1 Bit        Muxes := 7     
-	   3 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 9     
+	   3 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 2     
 	   8 Input      1 Bit        Muxes := 22    
 ---------------------------------------------------------------------------------
@@ -307,12 +310,12 @@ Detailed RTL Component Info :
 +---Registers : 
 	               32 Bit    Registers := 2     
 	               16 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
 +---Muxes : 
-	   3 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 6     
-	   3 Input      1 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 5     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 11    
+	   4 Input      1 Bit        Muxes := 2     
 Module reset_sync 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -386,13 +389,16 @@ Detailed RTL Component Info :
 Module cos_CORDIC 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 17    
-	   3 Input     32 Bit       Adders := 23    
-	   5 Input     32 Bit       Adders := 1     
+	   2 Input     33 Bit       Adders := 14    
+	   3 Input     32 Bit       Adders := 29    
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               33 Bit    Registers := 14    
+	               32 Bit    Registers := 33    
+	                1 Bit    Registers := 17    
 +---Muxes : 
-	   2 Input     34 Bit        Muxes := 3     
-	   2 Input     32 Bit        Muxes := 24    
-	   2 Input     17 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 30    
+	   2 Input     17 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 1     
 	   2 Input     15 Bit        Muxes := 1     
 	   2 Input     14 Bit        Muxes := 1     
@@ -404,6 +410,7 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -420,11 +427,131 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3331] design cos_CORDIC has unconnected port clock
 WARNING: [Synth 8-6014] Unused sequential element testmem/ram_reg was removed. 
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (udm/\udm_controller/tx_irq_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/x_reg[0][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/y_reg[0][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\udm/udm_controller/tx_irq_reg )
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][1]' (FDE) to 'cos_cor/xyz[0].x_reg[1][2]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][1]' (FDE) to 'cos_cor/xyz[0].y_reg[1][2]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][2]' (FDE) to 'cos_cor/xyz[0].x_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][2]' (FDE) to 'cos_cor/xyz[0].y_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][3]' (FDE) to 'cos_cor/xyz[0].x_reg[1][4]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][3]' (FDE) to 'cos_cor/xyz[0].y_reg[1][4]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][4]' (FDE) to 'cos_cor/xyz[0].x_reg[1][5]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][4]' (FDE) to 'cos_cor/xyz[0].y_reg[1][5]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][5]' (FDE) to 'cos_cor/xyz[0].x_reg[1][6]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][5]' (FDE) to 'cos_cor/xyz[0].y_reg[1][6]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][6]' (FDE) to 'cos_cor/xyz[0].x_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][6]' (FDE) to 'cos_cor/xyz[0].y_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][7]' (FDE) to 'cos_cor/xyz[0].x_reg[1][8]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][7]' (FDE) to 'cos_cor/xyz[0].y_reg[1][8]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][8]' (FDE) to 'cos_cor/xyz[0].x_reg[1][9]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][8]' (FDE) to 'cos_cor/xyz[0].y_reg[1][9]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][9]' (FDE) to 'cos_cor/xyz[0].x_reg[1][10]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][9]' (FDE) to 'cos_cor/xyz[0].y_reg[1][10]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][10]' (FDE) to 'cos_cor/xyz[0].x_reg[1][11]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][10]' (FDE) to 'cos_cor/xyz[0].y_reg[1][11]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][11]' (FDE) to 'cos_cor/xyz[0].x_reg[1][12]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][11]' (FDE) to 'cos_cor/xyz[0].y_reg[1][12]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][12]' (FDE) to 'cos_cor/xyz[0].x_reg[1][13]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][12]' (FDE) to 'cos_cor/xyz[0].y_reg[1][13]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][13]' (FDE) to 'cos_cor/xyz[0].x_reg[1][14]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][13]' (FDE) to 'cos_cor/xyz[0].y_reg[1][14]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][14]' (FDE) to 'cos_cor/xyz[0].x_reg[1][15]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][14]' (FDE) to 'cos_cor/xyz[0].y_reg[1][15]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][17]' (FDE) to 'cos_cor/xyz[0].x_reg[1][18]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][17]' (FDE) to 'cos_cor/xyz[0].y_reg[1][18]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][18]' (FDE) to 'cos_cor/xyz[0].x_reg[1][19]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][18]' (FDE) to 'cos_cor/xyz[0].y_reg[1][19]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][19]' (FDE) to 'cos_cor/xyz[0].x_reg[1][20]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][19]' (FDE) to 'cos_cor/xyz[0].y_reg[1][20]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][20]' (FDE) to 'cos_cor/xyz[0].x_reg[1][21]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][20]' (FDE) to 'cos_cor/xyz[0].y_reg[1][21]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][21]' (FDE) to 'cos_cor/xyz[0].x_reg[1][22]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][21]' (FDE) to 'cos_cor/xyz[0].y_reg[1][22]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][22]' (FDE) to 'cos_cor/xyz[0].x_reg[1][23]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][22]' (FDE) to 'cos_cor/xyz[0].y_reg[1][23]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][23]' (FDE) to 'cos_cor/xyz[0].x_reg[1][24]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][23]' (FDE) to 'cos_cor/xyz[0].y_reg[1][24]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][24]' (FDE) to 'cos_cor/xyz[0].x_reg[1][25]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][24]' (FDE) to 'cos_cor/xyz[0].y_reg[1][25]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][25]' (FDE) to 'cos_cor/xyz[0].x_reg[1][26]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][25]' (FDE) to 'cos_cor/xyz[0].y_reg[1][26]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][26]' (FDE) to 'cos_cor/xyz[0].x_reg[1][27]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][26]' (FDE) to 'cos_cor/xyz[0].y_reg[1][27]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][27]' (FDE) to 'cos_cor/xyz[0].x_reg[1][28]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][27]' (FDE) to 'cos_cor/xyz[0].y_reg[1][28]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][28]' (FDE) to 'cos_cor/xyz[0].x_reg[1][29]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][28]' (FDE) to 'cos_cor/xyz[0].y_reg[1][29]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][29]' (FDE) to 'cos_cor/xyz[0].x_reg[1][30]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][29]' (FDE) to 'cos_cor/xyz[0].y_reg[1][30]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].x_reg[1][30]' (FDE) to 'cos_cor/xyz[0].x_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cos_cor/xyz[0].y_reg[1][30]' (FDE) to 'cos_cor/xyz[0].y_reg[1][31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/xyz[0].x_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/xyz[0].y_reg[1][0] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1022.000 ; gain = 445.809
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:44 . Memory (MB): peak = 1033.254 ; gain = 389.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -441,7 +568,7 @@ Note: The table above is a preliminary report that shows the Block RAMs at the c
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6837] The timing for the instance i_1/testmem/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_41/testmem/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -454,13 +581,15 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'sys_clk/clk_out1' to pin 'sys_clk/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1022.000 ; gain = 445.809
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:55 . Memory (MB): peak = 1033.254 ; gain = 389.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/xyz[0].y_reg[1][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cos_cor/xyz[0].x_reg[1][15] )
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1022.000 ; gain = 445.809
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:01:00 . Memory (MB): peak = 1054.324 ; gain = 410.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -487,7 +616,7 @@ Start Technology Mapping
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6837] The timing for the instance testmem/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1022.000 ; gain = 445.809
+Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:01:02 . Memory (MB): peak = 1064.402 ; gain = 420.535
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -511,7 +640,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1022.000 ; gain = 445.809
+Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:01:05 . Memory (MB): peak = 1070.965 ; gain = 427.098
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -524,7 +653,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1022.000 ; gain = 445.809
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:01:05 . Memory (MB): peak = 1070.965 ; gain = 427.098
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -536,25 +665,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1022.000 ; gain = 445.809
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:01:06 . Memory (MB): peak = 1070.965 ; gain = 427.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1022.000 ; gain = 445.809
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:01:06 . Memory (MB): peak = 1070.965 ; gain = 427.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1022.000 ; gain = 445.809
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:01:06 . Memory (MB): peak = 1070.965 ; gain = 427.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1022.000 ; gain = 445.809
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:01:06 . Memory (MB): peak = 1070.965 ; gain = 427.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -572,56 +701,56 @@ Report Cell Usage:
 |      |Cell     |Count |
 +------+---------+------+
 |1     |sys_clk  |     1|
-|2     |CARRY4   |   335|
-|3     |LUT1     |   100|
-|4     |LUT2     |   584|
-|5     |LUT3     |   295|
-|6     |LUT4     |   234|
-|7     |LUT5     |   233|
-|8     |LUT6     |   362|
-|9     |MUXF7    |     1|
-|10    |RAMB36E1 |     1|
-|11    |FDPE     |     4|
-|12    |FDRE     |   400|
-|13    |FDSE     |    19|
-|14    |IBUF     |    18|
-|15    |OBUF     |    17|
+|2     |CARRY4   |   378|
+|3     |LUT1     |    53|
+|4     |LUT2     |   384|
+|5     |LUT3     |   119|
+|6     |LUT4     |   244|
+|7     |LUT5     |   123|
+|8     |LUT6     |  1004|
+|9     |RAMB36E1 |     1|
+|10    |FDPE     |     4|
+|11    |FDRE     |  1799|
+|12    |FDSE     |    19|
+|13    |IBUF     |    18|
+|14    |OBUF     |    17|
 +------+---------+------+
 
 Report Instance Areas: 
 +------+-------------------+---------------+------+
 |      |Instance           |Module         |Cells |
 +------+-------------------+---------------+------+
-|1     |top                |               |  2605|
-|2     |  reset_sync       |reset_sync     |     7|
-|3     |  testmem          |ram_dual       |     9|
-|4     |  udm              |udm            |   849|
-|5     |    uart_rx        |uart_rx        |   205|
-|6     |    uart_tx        |uart_tx        |   120|
-|7     |    udm_controller |udm_controller |   524|
+|1     |top                |               |  4165|
+|2     |  cos_cor          |cos_CORDIC     |  3162|
+|3     |  reset_sync       |reset_sync     |     8|
+|4     |  testmem          |ram_dual       |     9|
+|5     |  udm              |udm            |   865|
+|6     |    uart_rx        |uart_rx        |   194|
+|7     |    uart_tx        |uart_tx        |   129|
+|8     |    udm_controller |udm_controller |   542|
 +------+-------------------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1022.000 ; gain = 445.809
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:01:06 . Memory (MB): peak = 1070.965 ; gain = 427.098
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1022.000 ; gain = 302.543
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1022.000 ; gain = 445.809
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:54 . Memory (MB): peak = 1070.965 ; gain = 279.926
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:01:06 . Memory (MB): peak = 1070.965 ; gain = 427.098
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 337 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 379 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1024.418 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1087.004 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-72 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+196 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1024.418 ; gain = 707.262
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1024.418 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:01:27 . Memory (MB): peak = 1087.004 ; gain = 700.504
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1087.004 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/user/Downloads/HDL-master/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.runs/synth_1/NEXYS4_DDR.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'E:/HDL/designs/rtl/udm/syn/NEXYS4_DDR/NEXYS4_DDR.runs/synth_1/NEXYS4_DDR.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file NEXYS4_DDR_utilization_synth.rpt -pb NEXYS4_DDR_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Nov 28 20:23:08 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 18 23:29:37 2024...
